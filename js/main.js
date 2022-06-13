@@ -106,6 +106,46 @@ closeF.addEventListener("click", function () {
   e[0].style.display = "none";
 });
 
+fetch("https://formsubmit.co/michaelseth78@gmail.com", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
+  body: JSON.stringify({
+    name: "FormSubmit",
+    message: "Form submitted",
+  }),
+})
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
+
+let tog = document.getElementById("navbar-collapse-toggle");
+tog.addEventListener(
+  "click",
+  () => {
+    if (tog.classList.contains("show")) {
+      tog.classList.remove("show");
+    }
+  },
+  false
+);
+const navs = document.querySelectorAll("ul li");
+console.log(navs);
+
+for (var i = 0; i < navs.length; i++) {
+  navs[i].addEventListener(
+    "click",
+    function () {
+      if (tog.classList.contains("show")) {
+        tog.classList.remove("show");
+      }
+    },
+    false
+  );
+}
+
 // // Dark Mode
 // const options = {
 //   bottom: "20px", // default: '32px'
