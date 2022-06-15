@@ -1,7 +1,29 @@
-:root {
-  --main-color: #005f77;
+.light {
+  --bg-color-1: rgb(255, 255, 255);
+  --bg-color-2: rgb(234, 237, 242);
+  --main-color: rgb(50, 75, 111);
+  --big-text-color: rgb(29, 29, 29);
+  --med-text-color: rgb(49, 49, 49);
+  --small-text-color: rgb(69, 69, 69);
+  --filter: grayscale(10%);
+  --box-shadow-1: 0 25px 50px -12px rgb(0 0 0 / 25%);
+  --box-shadow-2: 0px 3px 10px 0px rgb(38 59 94 / 10%);
+  --box-shadow-3: 0px 30px 60px 0px rgb(38 59 94 / 10%);
+  --box-shadow-4: 0px 7px 15px 0px rgb(38 59 94 / 18%);
 }
-
+.dark {
+  --bg-color-1: rgb(16 12 7);
+  --bg-color-2: rgb(23 19 14);
+  --main-color: rgb(239, 87, 41);
+  --big-text-color: rgb(238, 238, 238);
+  --med-text-color: rgb(199, 199, 199);
+  --small-text-color: rgb(179, 179, 179);
+  --filter: grayscale(33.33%);
+  --box-shadow-1: 0 25px 50px -12px rgb(0 0 0 / 65%);
+  --box-shadow-2: 0px 3px 10px 0px rgb(0 0 0 / 66%);
+  --box-shadow-3: 0px 20px 50px 0px rgb(0 0 0 / 75%);
+  --box-shadow-4: 0px 7px 15px 0px rgb(0 0 0 / 18%);
+}
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 /*----------------------------------
 * Buttons
@@ -66,6 +88,7 @@
   background: var(--main-color);
   color: #ffffff;
   border-color: var(--main-color);
+  border-radius: 5px;
 }
 
 .m-btn.m-btn-theme:hover {
@@ -227,8 +250,9 @@
 ------------------------*/
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: var(--bg-color-1);
   font-size: 15px;
-  color: #555a64;
+  color: var(--small-text-color);
   font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -250,6 +274,7 @@ a:hover {
 
 img {
   max-width: 100%;
+  filter: var(--filter);
 }
 
 .fa,
@@ -453,12 +478,12 @@ h6 {
 }
 
 .gray-bg {
-  background-color: #eaedf2;
+  background-color: var(--bg-color-2);
 }
 
-.white-bg {
+/* .white-bg {
   background-color: #ffffff;
-}
+} */
 
 .blue-bg {
   background-color: #49bedf;
@@ -470,12 +495,8 @@ h6 {
   color: #ffffff;
 }
 
-.white-color-light {
-  color: rgba(255, 255, 255, 0.65);
-}
-
 .dark-color {
-  color: #202020;
+  color: var(--big-text-color);
 }
 
 .body-color {
@@ -487,7 +508,7 @@ h6 {
 }
 
 .green-color {
-  color: #11e279;
+  color: var(--main-color);
 }
 
 /*	Toggle Menu
@@ -499,7 +520,7 @@ h6 {
   position: relative;
   z-index: 1000;
   margin: 0;
-  border-radius: 0;
+  border-radius: 5px;
   padding: 0;
   margin-left: 15px;
   background: var(--main-color);
@@ -647,7 +668,7 @@ h6 {
 -----------------------------*/
 .fixed-header .header-dark {
   background: #ffffff;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.164);
+  box-shadow: var(--box-shadow-1);
 }
 
 @media (min-width: 992px) {
@@ -666,7 +687,7 @@ h6 {
   }
 
   .fixed-header .header-dark.header-transparent {
-    background: #ffffff;
+    background: var(--bg-color-1);
   }
 
   .header-dark .navbar-brand {
@@ -682,7 +703,7 @@ h6 {
     font-weight: 600;
     text-transform: capitalize;
     letter-spacing: 0.035rem;
-    color: #202020;
+    color: var(--med-text-color);
     margin-left: 10px;
   }
 
@@ -761,7 +782,7 @@ h6 {
   }
 
   .fixed-header .header-nav {
-    background: #ffffff;
+    background: var(--bg-color-1);
   }
 
   .header-nav .navbar-brand {
@@ -984,15 +1005,15 @@ h6 {
 *	Box shadow
 ---------------------------*/
 .box-shadow-lg {
-  box-shadow: 0px 30px 60px 0px rgba(38, 59, 94, 0.1);
+  box-shadow: var(--box-shadow-3);
 }
 
 .box-shadow {
-  box-shadow: 0px 3px 10px 0px rgba(38, 59, 94, 0.1);
+  box-shadow: var(--box-shadow-2);
 }
 
 .box-shadow-hover {
-  box-shadow: 0px 3px 10px 0px rgba(38, 59, 94, 0.1);
+  box-shadow: var(--box-shadow-3);
 }
 
 .box-shadow-hover:hover {
@@ -1123,6 +1144,7 @@ h6 {
 .bg-cover {
   background-size: cover;
   background-position: center;
+  filter: var(--filter);
 }
 
 .bg-no-repeat {
@@ -6531,7 +6553,7 @@ h6 {
 
 .home-banner-01 h1 {
   font-size: 60px;
-  color: #202020;
+  color: var(--big-text-color);
   font-weight: 600;
   margin: 0 0 15px;
   line-height: 1;
@@ -6707,7 +6729,7 @@ h6 {
 
 .home-banner-02 h1 {
   font-size: 80px;
-  color: #ffffff;
+  color: var(--big-text-color);
   font-weight: 600;
   margin: 0 0 25px;
   line-height: 1.3;
@@ -6820,7 +6842,7 @@ h6 {
 .home-banner-03 .ht-text h1 {
   font-size: 65px;
   font-weight: 600;
-  color: #202020;
+  color: var(--big-text-color);
   -webkit-font-smoothing: antialiased;
   text-shadow: rgba(0, 0, 0, 0.1) 0 0 1px;
 }
@@ -6863,7 +6885,7 @@ h6 {
 /* About Us
 ----------------------*/
 .about-me-img {
-  border: 14px solid #ffffff;
+  border: 14px solid var(--bg-color-1);
   border-radius: 5px;
   position: relative;
 }
@@ -6873,7 +6895,7 @@ h6 {
   position: absolute;
   top: 20px;
   left: -10px;
-  background: #ffffff;
+  background: var(--bg-color-1);
   padding: 8px;
 }
 
@@ -6931,15 +6953,18 @@ h6 {
   font-weight: 600;
   font-size: 30px;
   margin: 0 0 10px;
-  color: #202020;
+  color: var(--med-text-color);
 }
 
 .about-me h6 {
-  color: #202020;
   font-weight: 400;
   margin: 0 0 20px;
 }
 
+.about-me p {
+  text-align: justify;
+  line-height: 1.75;
+}
 .about-list {
   margin-top: 20px;
 }
@@ -6949,9 +6974,9 @@ h6 {
   line-height: normal;
 }
 
-label {
+.label {
   margin: 0;
-  color: #202020;
+  color: var(--med-text-color);
   font-weight: 600;
   font-size: 14px;
   flex: 0 0 90px;
@@ -6974,9 +6999,9 @@ label {
 .feature-box-2 {
   padding: 18px 15px;
   border-radius: 5px;
-  background: #ffffff;
+  background: var(--bg-color-1);
   /* border: 1px solid var(--main-color); */
-  box-shadow: 0px 7px 15px 0px rgba(38, 59, 94, 0.178);
+  box-shadow: var(--box-shadow-4);
   -moz-transition: ease all 0.35s;
   -o-transition: ease all 0.35s;
   -webkit-transition: ease all 0.35s;
@@ -6995,27 +7020,27 @@ label {
   margin: 0;
   font-weight: 600;
   font-size: 16px;
-  color: #202020;
+  color: var(--small-text-color);
 }
 
 .feature-box-2:hover {
-  background: #ffffff;
+  background: var(--main-color);
 }
 
 .feature-box-2:hover .icon {
-  color: var(--main-color);
+  color: var(--small-text-color);
 }
 
 .feature-box-2:hover h5 {
-  color: #202020;
+  color: var(--med-text-color);
 }
 
 /* Services
 ------------------*/
 .feature-box-1 {
   padding: 40px 30px;
-  background: #ffffff;
-  border: 1px solid #eee;
+  background: var(--bg-color-1);
+  border: 1px solid var(--bg-color-2);
   border-radius: 5px;
   position: relative;
   top: 0;
@@ -7039,7 +7064,7 @@ label {
 }
 
 .feature-box-1 h5 {
-  color: #202020;
+  color: var(--small-text-color);
   font-weight: 600;
   font-size: 16px;
   margin: 0 0 12px;
@@ -7178,9 +7203,9 @@ label {
 }
 
 .portfolio-box-01 {
-  background: rgb(255, 255, 255);
+  background: var(--bg-color-1s);
   padding: 20px;
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
+  box-shadow: var(--box-shadow-1);
   margin: 15px 0;
   position: relative;
 }
@@ -7218,7 +7243,7 @@ label {
 }
 
 .portfolio-box-01 .portfolio-info h5 {
-  color: #1c1d24;
+  color: var(--small-text-color);
   font-size: 25px;
   font-weight: 600;
   display: block;
@@ -7297,7 +7322,7 @@ label {
 /* Blog
 ------------------*/
 .blog-grid .blog-gird-info {
-  background: #ffffff;
+  background: var(--bg-color-1);
   margin: -30px 10px 0;
   position: relative;
   padding: 18px;
@@ -7316,13 +7341,13 @@ label {
 }
 
 .blog-grid .blog-gird-info .meta {
-  background: #ffffff;
+  background: var(--bg-color-1);
   padding: 0px 12px;
   display: inline-block;
   vertical-align: top;
   font-size: 12px;
   border-radius: 3px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--bg-color-2);
 }
 
 .blog-grid .blog-gird-info .b-meta {
@@ -7335,14 +7360,14 @@ label {
 }
 
 .blog-grid .blog-gird-info h5 a {
-  color: #202020;
+  color: var(--small-text-color);
 }
 
 /* Contact Us
 ------------------*/
 .contact-form {
   border-radius: 5px;
-  background: #ffffff;
+  background: var(--bg-color-1);
   padding: 5%;
 }
 
@@ -7350,7 +7375,7 @@ label {
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
-  color: #202020;
+  color: var(--med-text-color);
   margin-bottom: 20px;
 }
 
@@ -7374,6 +7399,7 @@ label {
 
 .contact-form .form-group .form-control {
   border: none;
+  background-color: var(--bg-color-1);
   border-bottom: 1px solid #ccc;
   border-radius: 0;
   padding-left: 0;
@@ -7400,8 +7426,9 @@ label {
 }
 
 .contact-info {
-  background: #ffffff;
+  background: var(--bg-color-1);
   padding: 20px;
+  border-radius: 5px;
 }
 
 .contact-info:not(:first-child) {
@@ -7415,7 +7442,7 @@ label {
   border-radius: 50%;
   color: #ffffff;
   background: var(--main-color);
-  font-size: 19px;
+  font-size: 15px;
   line-height: 40px;
   margin-right: 20px;
 }
@@ -7423,7 +7450,7 @@ label {
 .contact-info .media-body h6 {
   font-size: 15px;
   font-weight: 500;
-  color: #202020;
+  color: var(--med-text-color);
   margin-bottom: 8px;
 }
 
@@ -7487,8 +7514,67 @@ label {
   font-size: 24px;
   color: #2c2c2c !important;
 }
+.progress {
+  background-color: var(--bg-color-2);
+}
 /* .navbar-collapse{
   background-color: #1c1d24 !important;
   height: 100vh;
   width: 100%;
 } */
+
+.toggle {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 174px;
+  align-items: center;
+}
+.toggle input[type="checkbox"] {
+  display: inline;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggle .toggle-label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px;
+  height: 30px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  margin: auto;
+}
+
+.toggle .toggle-label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+.toggle input:checked + .toggle-label {
+  background: var(--main-color);
+}
+
+.toggle input:checked + .toggle-label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.toggle-label:active:after {
+  width: 30px;
+}
+b {
+  color: #f3f3f3;
+  font-size: 12px;
+  font-weight: 300;
+}
