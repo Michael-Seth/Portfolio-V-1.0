@@ -834,7 +834,7 @@
             <div class="col-lg-8 m-15px-tb">
               <div class="contact-form box-shadow">
                 <h4 class="dark-color font-alt m-20px-b">Say Something</h4>
-                <form id="contact-form">
+                <form id="contact" method="POST" data-netlify="true">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
@@ -882,6 +882,11 @@
                           class="form-control"
                         ></textarea>
                         <span class="input-focus-effect theme-bg"></span>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div data-netlify-recaptcha="true"></div>
                       </div>
                     </div>
                     <div class="col-md-12">

@@ -106,20 +106,20 @@ closeF.addEventListener("click", function () {
   e[0].style.display = "none";
 });
 
-fetch("https://formsubmit.co/michaelseth78@gmail.com", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    Accept: "application/json",
-  },
-  body: JSON.stringify({
-    name: "FormSubmit",
-    message: "Form submitted",
-  }),
-})
-  .then((response) => response.json())
-  .then((data) => console.log(data))
-  .catch((error) => console.log(error));
+// fetch("https://formsubmit.co/michaelseth78@gmail.com", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//     Accept: "application/json",
+//   },
+//   body: JSON.stringify({
+//     name: "FormSubmit",
+//     message: "Form submitted",
+//   }),
+// })
+//   .then((response) => response.json())
+//   .then((data) => console.log(data))
+//   .catch((error) => console.log(error));
 
 let tog = document.getElementById("navbar-collapse-toggle");
 tog.addEventListener(
