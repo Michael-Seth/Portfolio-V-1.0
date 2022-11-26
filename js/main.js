@@ -27,84 +27,64 @@ function myFunction() {
   }
 }
 
-//Pop up modal for portfolio display
-let port = document.getElementById("popImg");
-port.addEventListener("click", function () {
-  let e = document.getElementsByClassName("backgroundA");
-  e[0].style.display = "block";
-  // console.log("Working well");
+var owl = $(".owl-carousel");
+owl.owlCarousel({
+  items: 5,
+  loop: true,
+  margin: 10,
+  autoplay: true,
+  dots: false,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 2,
+      nav: false,
+    },
+    600: {
+      items: 3,
+      nav: false,
+    },
+    1000: {
+      items: 5,
+      nav: false,
+      loop: true,
+    },
+  },
+});
+$(".play").on("click", function () {
+  owl.trigger("play.owl.autoplay", [1000]);
+});
+$(".stop").on("click", function () {
+  owl.trigger("stop.owl.autoplay");
 });
 
-let portB = document.getElementById("popImgB");
-portB.addEventListener("click", function () {
-  let e = document.getElementsByClassName("backgroundB");
-  e[0].style.display = "block";
-  // console.log("Working well");
-});
+const modal = document.querySelector(".modald");
+const trigger = document.querySelectorAll(".trigger");
+const closeButton = document.querySelector("#close");
 
-let portC = document.getElementById("popImgC");
-portC.addEventListener("click", function () {
-  let e = document.getElementsByClassName("backgroundC");
-  e[0].style.display = "block";
-  // console.log("Working well");
-});
+// function openModal() {
+//   modal.classList.add("show-modald");
+// }
+function closeModal() {
+  modal.classList.remove("show-modald");
+}
 
-let portD = document.getElementById("popImgD");
-portD.addEventListener("click", function () {
-  let e = document.getElementsByClassName("backgroundD");
-  e[0].style.display = "block";
-  // console.log("Working well");
-});
+for (let i = 0; i < trigger.length; i++) {
+  trigger[i].addEventListener(
+    "click",
+    function () {
+      modal.classList.add("show-modald");
+      console.log("working");
+    },
+    false
+  );
+}
 
-let portE = document.getElementById("popImgE");
-portE.addEventListener("click", function () {
-  let e = document.getElementsByClassName("backgroundE");
-  e[0].style.display = "block";
-  // console.log("Working well");
-});
-
-let portF = document.getElementById("popImgF");
-portF.addEventListener("click", function () {
-  let e = document.getElementsByClassName("backgroundF");
-  e[0].style.display = "block";
-  // console.log("Working well");
-});
-
-let close = document.getElementById("close");
-close.addEventListener("click", function () {
-  let e = document.getElementsByClassName("backgroundA");
-  e[0].style.display = "none";
-});
-
-let closeB = document.getElementById("closeB");
-closeB.addEventListener("click", function () {
-  let e = document.getElementsByClassName("backgroundB");
-  e[0].style.display = "none";
-});
-
-let closeC = document.getElementById("closeC");
-closeC.addEventListener("click", function () {
-  let e = document.getElementsByClassName("backgroundC");
-  e[0].style.display = "none";
-});
-
-let closeD = document.getElementById("closeD");
-closeD.addEventListener("click", function () {
-  let e = document.getElementsByClassName("backgroundD");
-  e[0].style.display = "none";
-});
-
-let closeE = document.getElementById("closeE");
-closeE.addEventListener("click", function () {
-  let e = document.getElementsByClassName("backgroundE");
-  e[0].style.display = "none";
-});
-
-let closeF = document.getElementById("closeF");
-closeF.addEventListener("click", function () {
-  let e = document.getElementsByClassName("backgroundF");
-  e[0].style.display = "none";
-});
+//trigger.addEventListener("click", openModal);
+closeButton.addEventListener("click", closeModal);
+//closeButton.addEventListener("click", toggleModal);
+//window.addEventListener("click", windowOnClick);
 
 // fetch("https://formsubmit.co/michaelseth78@gmail.com", {
 //   method: "POST",
@@ -132,7 +112,6 @@ tog.addEventListener(
   false
 );
 const navs = document.querySelectorAll("ul li");
-console.log(navs);
 
 for (var i = 0; i < navs.length; i++) {
   navs[i].addEventListener(
@@ -175,11 +154,11 @@ function toggleTheme() {
 
 function replaceClass() {
   if (toggle.checked) {
-    page.classList.replace("light", "dark");
-    mode.textContent = "Dark-mode";
-  } else {
     page.classList.replace("dark", "light");
     mode.textContent = "Light-mode";
+  } else {
+    page.classList.replace("light", "dark");
+    mode.textContent = "Dark-mode";
   }
 }
 

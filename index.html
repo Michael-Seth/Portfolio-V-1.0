@@ -6,12 +6,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description"
-    content="Hi, i am full-stack Web Developer and this is my personal web portfolio. I am available for your web project" />
+    content="Hi, i am frontend Web Developer and this is my personal web portfolio. I am available for your web project" />
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <!-- OWL Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- <link rel="stylesheet" href="css/style.css"> -->
   <link href="css/styles.css" rel="stylesheet" />
   <link href="font-awesome/css/all.min.css" rel="stylesheet" />
@@ -19,59 +28,102 @@
   <link href="et-line/style.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
 
-  <title>Michael Osas - Full-stack Web Developer</title>
+  <title>Michael Seth - Frontend Web Developer</title>
 </head>
 
-<body data-spy="scroll" data-target="#navbar-collapse-toggle" data-offset="70" class="light">
-  <div>
-    <div class="backgroundA">
-      <span class="spanA" id="close">x</span>
+<body data-spy="scroll" data-target="#navbar-collapse-toggle" data-offset="70" class="dark">
+  <div class="modald">
+    <div class="modal-contentd">
+      <span class="close-buttond" id="close">&times;</span>
       <div class="contentA">
-        <img src="img/port1.jpeg" alt="" class="imgsA" />
+        <h3 class="project-title">Title : <span>Gfinder</span> </h3>
+        <div class="project-img">
+          <input type="radio" id="image1" name="image" checked>
+          <input type="radio" id="image2" name="image">
+          <input type="radio" id="image3" name="image">
+
+          <div class="container">
+            <div class="featured-wrapper">
+              <ul class="featured-list">
+                <li>
+                  <figure>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature4.jpg" alt="">
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature11.jpg" alt="">
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature6.jpg" alt="">
+                  </figure>
+                </li>
+              </ul>
+              <ul class="arrows">
+                <li>
+                  <label for="image1"></label>
+                </li>
+                <li>
+                  <label for="image2"></label>
+                </li>
+                <li>
+                  <label for="image3"></label>
+                </li>
+              </ul>
+              <ul class="dots">
+                <li>
+                  <label for="image1"></label>
+                </li>
+                <li>
+                  <label for="image2"></label>
+                </li>
+                <li>
+                  <label for="image3"></label>
+                </li>
+              </ul>
+            </div>
+            <ul class="thumb-list">
+              <li>
+                <label for="image1">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature4.jpg" alt="">
+                  <span class="outer">
+                    <span class="inner">Caption1</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <label for="image2">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature11.jpg" alt="">
+                  <span class="outer">
+                    <span class="inner">Caption2</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <label for="image3">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature6.jpg" alt="">
+                  <span class="outer">
+                    <span class="inner">Caption3</span>
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-info">
+          <h4>Technologies : <span class="tags">React</span> <span class="tags">GitHub API</span> <span
+              class="tags">Tailwind CSS</span></h4>
+          <h4>Description : <br><br> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores sit
+              necessitatibus sint! Ex hic deleniti nobis repudiandae vitae a, repellendus sed debitis mollitia sequi ea.
+              Odit aut placeat corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores sit
+              necessitatibus sint! Ex hic deleniti nobis repudiandae vitae a, repellendus sed debitis mollitia sequi ea.
+              Odit aut placeat corrupti. </span></h4>
+        </div>
+        <h4 class="project-footer">Made With ❤️ By Michael-Seth</h4>
       </div>
     </div>
-    <!-- ==================================================================
-        ================================================================== -->
-    <div class="backgroundB">
-      <span class="spanA" id="closeB">x</span>
-      <div class="contentA">
-        <img src="img/proj2.jpeg" alt="" class="imgsA" />
-      </div>
-    </div>
-    <!-- ==================================================================
-        ================================================================== -->
-    <div class="backgroundC">
-      <span class="spanA" id="closeC">x</span>
-      <div class="contentA">
-        <img src="img/port3.png" alt="" class="imgsA" />
-      </div>
-    </div>
-    <!-- ==================================================================
-        ================================================================== -->
-    <div class="backgroundD">
-      <span class="spanA" id="closeD">x</span>
-      <div class="contentA">
-        <img src="img/port4.png" alt="" class="imgsA" />
-      </div>
-    </div>
-    <!-- ==================================================================
-        ================================================================== -->
-    <div class="backgroundE">
-      <span class="spanA" id="closeE">x</span>
-      <div class="contentA">
-        <img src="img/port2.png" alt="" class="imgsA" />
-      </div>
-    </div>
-    <!-- ==================================================================
-        ================================================================== -->
-    <div class="backgroundF">
-      <span class="spanA" id="closeF">x</span>
-      <div class="contentA">
-        <img src="img/proj3.jpeg" alt="" class="imgsA" />
-      </div>
-    </div>
-    <!-- ==================================================================
-        ================================================================== -->
   </div>
 
   <header id="myHeader">
@@ -123,7 +175,7 @@
           <div class="col-md-6">
             <div class="ht-text">
               <h6>Hello there!</h6>
-              <h1>I'm Michael Osas</h1>
+              <h1 class="hover-4">I'm Michael Seth</h1>
               <p>
                 I design and develop services for customers of all sizes,
                 specializing in creating stylish, modern websites, web
@@ -172,19 +224,18 @@
           </div>
           <div class="col-lg-7 m-15px-tb">
             <div class="about-me">
-              <h4>I am Michael Osas</h4>
+              <h4>Michael Seth</h4>
               <h6>
-                <span class="theme-color">FULL-STACK DEVELOPER</span>
+                <span class="theme-color">FRONTEND DEVELOPER</span>
               </h6>
               <p>
-                My name is Michael Osas. I design and develop web services for
-                clients and small businesses. Specialize in building
-                responsive modern web design and ecommerce application.
+                My name is Michael Seth. I am an experienced frontend developer with a strong background in project
+                management and team leadership.
+                With 6+ years of experience in web development i am highly skilled with various web technologies such as
+                JavaScript, react, firebase, django, next.js, WordPress and UI component libraries.
                 <br />
-                With 5+ years experience as a professional web developer, I
-                have acquired the skills and knowledge necessary to make your
-                project a success. I enjoy every step of the design process,
-                from discussion and collaboration to project completion.
+                I am industrious and passionate with a flair for designing elegant user experience in the appropriate
+                due time.
               </p>
               <div class="btn-bar">
                 <a class="m-btn m-btn-theme"
@@ -200,14 +251,17 @@
               <label class="label">Birthday: &nbsp;</label>
               <p>12th September</p>
             </div>
-
-            <div class="media">
+            <!-- <div class="media">
               <label class="label">Residence:&nbsp; </label>
               <p>Nigeria</p>
+            </div> -->
+            <div class="media">
+              <label class="label">Education: &nbsp;</label>
+              <p>B.Eng.</p>
             </div>
             <div class="media">
               <label class="label">Address: &nbsp;</label>
-              <p>Utako, Abuja</p>
+              <p>Apo resettlement, Abuja</p>
             </div>
           </div>
           <div class="col-md-4">
@@ -218,12 +272,9 @@
 
             <div class="media">
               <label class="label">Experience: &nbsp;</label>
-              <p>Full-stack Developer</p>
+              <p>Frontend Developer</p>
             </div>
-            <div class="media">
-              <label class="label">Education: &nbsp;</label>
-              <p>B.Eng.</p>
-            </div>
+
           </div>
           <!-- <div class="col-md-3">
                         <div class="media">
@@ -237,7 +288,7 @@
                         </div>
                         <div class="media">
                             <label>Address: &nbsp;</label>
-                            <p>Utako, Abuja</p>
+                            <p>Apo resettlement, Abuja</p>
                         </div>
                     </div> -->
           <div class="col-md-4">
@@ -280,16 +331,16 @@
             <div class="skill-lt">
               <h6 class="dark-color">Javascripts</h6>
               <div class="progress">
-                <div class="progress-bar theme-bg" role="progressbar" style="width: 62%" aria-valuenow="25"
+                <div class="progress-bar theme-bg" role="progressbar" style="width: 92%" aria-valuenow="25"
                   aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
             <!-- end skill -->
             <!-- skill -->
             <div class="skill-lt">
-              <h6 class="dark-color">Django</h6>
+              <h6 class="dark-color">React</h6>
               <div class="progress">
-                <div class="progress-bar theme-bg" role="progressbar" style="width: 70%" aria-valuenow="25"
+                <div class="progress-bar theme-bg" role="progressbar" style="width: 79%" aria-valuenow="25"
                   aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
@@ -306,9 +357,9 @@
             <!-- end skill -->
             <!-- skill -->
             <div class="skill-lt">
-              <h6 class="dark-color">Wordpress</h6>
+              <h6 class="dark-color">Django</h6>
               <div class="progress">
-                <div class="progress-bar theme-bg" role="progressbar" style="width: 88%" aria-valuenow="25"
+                <div class="progress-bar theme-bg" role="progressbar" style="width: 70%" aria-valuenow="25"
                   aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
@@ -353,7 +404,7 @@
                     <i class="fas fa-compact-disc"></i>
                   </div>
                   <div class="media-body">
-                    <h5>I Love Music</h5>
+                    <h5>Music</h5>
                   </div>
                 </div>
               </div>
@@ -385,13 +436,9 @@
                 <i class="icon-desktop"></i>
               </div>
               <div class="feature-content">
-                <h5>Full-Stack Web Development</h5>
+                <h5>Reliable Solutions</h5>
                 <p>
-                  Full-stack approach is often used for projects that require
-                  end-to-end or full-cycle management, regardless of size or
-                  complexity. I provide Full-Stack service from UI design to
-                  project completion. Using Django web framework, PostgreSQL
-                  and Next.js.
+                  Provide intelligent solutions breaking any form of complexity through our extensive experience.
                 </p>
               </div>
             </div>
@@ -404,13 +451,9 @@
                 <i class="icon-pricetags"></i>
               </div>
               <div class="feature-content">
-                <h5>Ecommerce Applications</h5>
+                <h5>Interactive Designs</h5>
                 <p>
-                  As consumers transfer their shopping habits to the digital
-                  realm, using the right strategy and technology stack for
-                  your project, i offer ecommerce services built with solid
-                  technologies such as django web framework or woocommerce for
-                  wordpress based platforms.
+                  Plan and design intuitively to make interfaces more receptive for the users
                 </p>
               </div>
             </div>
@@ -423,13 +466,9 @@
                 <i class="icon-chat"></i>
               </div>
               <div class="feature-content">
-                <h5>Custom Web Applications</h5>
+                <h5>Impressive Communication</h5>
                 <p>
-                  full-stack approach is often used for projects that require
-                  end-to-end or full-cycle management, regardless of size or
-                  complexity. Custom web application designed and created
-                  specifically for your business. School projects, browser
-                  based application, online tools and PWAs
+                  Well organized to keep constantly in touch with our clients when they need us.
                 </p>
               </div>
             </div>
@@ -442,14 +481,8 @@
                 <i class="icon-mobile"></i>
               </div>
               <div class="feature-content">
-                <h5>Content Management Systems</h5>
-                <p>
-                  A Content Management System (CMS) makes your website’s
-                  content easier to manage. Although there are some very
-                  popular CMS services out there (i.e wordpress, ghost,
-                  strapi). I will build your apllication for you with any cms
-                  or your choice.
-                </p>
+                <h5>Prompt Delivery</h5>
+                <p>Plan, develop and deliver projects promptly as how it is promised at the beginning.</p>
               </div>
             </div>
           </div>
@@ -461,14 +494,8 @@
                 <i class="icon-target"></i>
               </div>
               <div class="feature-content">
-                <h5>SEO optimization</h5>
-                <p>
-                  With SEO, i will increase the visibility of your business in
-                  search resultson search engines like Google and
-                  Bing.focusing on optimization involving your title tags,
-                  content, website backlinks, page speed, site architecture
-                  and all technicalities.
-                </p>
+                <h5>Cost-effective Solutions</h5>
+                <p>Solutions that are pocket friendly and add more value to your business with better ROI.</p>
               </div>
             </div>
           </div>
@@ -480,14 +507,8 @@
                 <i class="icon-tools-2"></i>
               </div>
               <div class="feature-content">
-                <h5>Web Support and Maintenance</h5>
-                <p>
-                  My website maintenance and support programs guarantee that
-                  your site always exists and your project resides within
-                  budget. Modern web support and maintenance to keep the
-                  website and applications free of errors, cyberattacks and
-                  updated to their latest versions.
-                </p>
+                <h5>Quality of Service</h5>
+                <p>Ensure customer satisfaction through continuously delivering excellent services flawlessly.</p>
               </div>
             </div>
           </div>
@@ -503,7 +524,7 @@
         <div class="row sm-m-25px-b m-35px-b">
           <div class="col-md-12">
             <div class="section-title">
-              <h3 class="dark-color text-uppercase">LATEST WORKS</h3>
+              <h3 class="dark-color text-uppercase">TOP PROJECTS</h3>
               <p class="text-uppercase small">
                 Pleasure in the job brings perfection
               </p>
@@ -527,7 +548,7 @@
                   <a href="https://richiejerseys.com" target="_blank"><span>View Live</span></a>
                 </div>
                 <div class="portfolio-img">
-                  <img src="img/port1.jpeg" title="" alt="" />
+                  <img src="img/port1.jpeg" class="trigger" title="" alt="" />
                 </div>
 
                 <!-- <a class="link-overlay"></a> -->
@@ -546,7 +567,7 @@
                   <a href="https://exquisitebranding.com" target="_blank"><span>View Live</span></a>
                 </div>
                 <div class="portfolio-img">
-                  <img src="img/proj2.jpeg" title="" alt="" />
+                  <img src="img/proj2.jpeg" title="" alt="" class="trigger" />
                 </div>
 
                 <!-- <a class="link-overlay"></a> -->
@@ -564,7 +585,7 @@
                   <a href="https://tour-bookings.netlify.app" target="_blank"><span>View Demo</span></a>
                 </div>
                 <div class="portfolio-img">
-                  <img src="img/port3.png" title="" alt="" />
+                  <img src="img/port3.png" title="" alt="" class="trigger" />
                 </div>
                 <!-- <a class="link-overlay"></a> -->
               </div>
@@ -581,7 +602,7 @@
                   <span>View Live</span>
                 </div>
                 <div class="portfolio-img">
-                  <img src="img/port4.png" title="" alt="" />
+                  <img src="img/port4.png" title="" alt="" class="trigger" />
                 </div>
                 <!-- <a class="link-overlay"></a> -->
               </div>
@@ -598,7 +619,7 @@
                   <a href="https://spaceagemultimedia.com" target="_blank"><span>View Live</span></a>
                 </div>
                 <div class="portfolio-img">
-                  <img src="img/port2.png" title="" alt="" />
+                  <img src="img/port2.png" title="" alt="" class="trigger" />
                 </div>
                 <!-- <a class="link-overlay"></a> -->
               </div>
@@ -615,7 +636,7 @@
                   <a href="https://widemovers.com" target="_blank"><span>View Live</span></a>
                 </div>
                 <div class="portfolio-img">
-                  <img src="img/proj3.jpeg" title="" alt="" />
+                  <img src="img/proj3.jpeg" title="" alt="" class="trigger" />
                 </div>
                 <!-- <a class="link-overlay"></a> -->
               </div>
@@ -634,7 +655,7 @@
         <div class="row sm-m-25px-b m-35px-b">
           <div class="col-md-12">
             <div class="section-title">
-              <h3 class="dark-color text-uppercase">My Blogs</h3>
+              <h3 class="dark-color text-uppercase">Satisfied Clients</h3>
               <p class="text-uppercase small">
                 Pleasure in the job brings perfection
               </p>
@@ -642,7 +663,39 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-4 m-15px-tb">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <img src="./img/brand-logos/civic logo.png" alt="">
+            </div>
+            <div class="item">
+              <img src="./img/brand-logos/damsa herbal.png" alt="">
+            </div>
+            <div class="item">
+              <img src="./img/brand-logos/EXPERIENCED SAFETY MANAGERS-3@2x.png" alt="">
+            </div>
+            <div class="item">
+              <img src="./img/brand-logos/Frica-Farms-Asset-1-png.png" alt="">
+            </div>
+            <div class="item">
+              <img src="./img/brand-logos/logo.png" alt="">
+            </div>
+            <div class="item">
+              <img src="./img/brand-logos/Microweb-logo-trans-1-e1659400683649.png" alt="">
+            </div>
+            <div class="item">
+              <img src="./img/brand-logos/preloader logo.png" alt="">
+            </div>
+            <div class="item">
+              <img src="./img/brand-logos/RJ7 ai2.png" alt="">
+            </div>
+            <div class="item">
+              <img src="./img/brand-logos/Sponsor.png" alt="">
+            </div>
+            <div class="item">
+              <img src="./img/brand-logos/Viange_Logo.png" alt="">
+            </div>
+          </div>
+          <!-- <div class="col-lg-4 m-15px-tb">
             <div class="blog-grid">
               <div class="blog-grid-img">
                 <a href="blog1.html">
@@ -664,9 +717,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- col -->
-          <div class="col-lg-4 m-15px-tb">
+          <!-- <div class="col-lg-4 m-15px-tb">
             <div class="blog-grid">
               <div class="blog-grid-img">
                 <a href="blog2.html">
@@ -690,9 +743,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- col -->
-          <div class="col-lg-4 m-15px-tb">
+          <!-- <div class="col-lg-4 m-15px-tb">
             <div class="blog-grid">
               <div class="blog-grid-img">
                 <a href="blog3.html">
@@ -717,7 +770,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- col -->
         </div>
       </div>
@@ -795,7 +848,7 @@
               </div>
               <div class="media-body">
                 <h6 class="dark-color font-alt">My Address</h6>
-                <p>TOS Benson Crescent. Utako, Abuja Nigeria.</p>
+                <p>Apo resettlement, Abuja.</p>
               </div>
             </div>
 
@@ -916,13 +969,18 @@
           </div>
         </div>
         <div class="col-md-4 m-10px-tb text-center text-md-right">
-          <p>All rights reserved | Michael Osas © 2020</p>
+          <p>All rights reserved | Michael Seth © 2020</p>
         </div>
       </div>
     </div>
   </footer>
   <!-- Footer End-->
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/main.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
