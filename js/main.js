@@ -59,30 +59,29 @@ $(".stop").on("click", function () {
   owl.trigger("stop.owl.autoplay");
 });
 
-const modal = document.querySelector(".modald");
-const trigger = document.querySelectorAll(".trigger");
-const closeButton = document.querySelector("#close");
-
 // function openModal() {
-//   modal.classList.add("show-modald");
+//   modal.classList.add("show-");
 // }
-function closeModal() {
-  modal.classList.remove("show-modald");
-}
 
-for (let i = 0; i < trigger.length; i++) {
-  trigger[i].addEventListener(
-    "click",
-    function () {
-      modal.classList.add("show-modald");
-      console.log("working");
-    },
-    false
-  );
-}
+const triggerBtns = document.querySelectorAll(".trigger");
+
+triggerBtns.forEach((btn) => {
+  btn.onclick = function () {
+    var modal = btn.getAttribute("data-modal");
+    document.getElementById(modal).classList.add("show-modald");
+  };
+});
+
+const closeButton = document.querySelectorAll(".close-buttond");
+
+closeButton.forEach((closeBtn) => {
+  closeBtn.onclick = function () {
+    var modal = closeBtn.closest(".modald").classList.remove("show-modald");
+  };
+});
 
 //trigger.addEventListener("click", openModal);
-closeButton.addEventListener("click", closeModal);
+//closeButton.addEventListener("click", closeModal);
 //closeButton.addEventListener("click", toggleModal);
 //window.addEventListener("click", windowOnClick);
 
@@ -100,6 +99,8 @@ closeButton.addEventListener("click", closeModal);
 //   .then((response) => response.json())
 //   .then((data) => console.log(data))
 //   .catch((error) => console.log(error));
+
+//For Navbar
 
 let tog = document.getElementById("navbar-collapse-toggle");
 tog.addEventListener(

@@ -1,11 +1,12 @@
 .light {
   --bg-color-1: rgb(255, 255, 255);
-  --bg-color-2: rgb(234, 237, 242);
-  --main-color: linear-gradient(15deg, #c638ff, #ff77b4);
+  --bg-color-2: rgb(246, 246, 246);
+  --main-color: linear-gradient(15deg, #4520bd, #307ac9);
   --big-text-color: rgb(21, 21, 21);
   --med-text-color: rgb(27, 27, 27);
   --small-text-color: rgb(26, 26, 26);
   --filter: grayscale(10%);
+  --white: #142773;
   --border-color: #87878724;
   --box-shadow-1: 0 25px 50px -12px rgb(0 0 0 / 25%);
   --box-shadow-2: 0px 3px 10px 0px rgb(38 59 94 / 10%);
@@ -15,11 +16,12 @@
 .dark {
   --bg-color-1: #070718;
   --bg-color-2: #030012;
-  --main-color: linear-gradient(15deg, #c638ff, #ff77b4);
+  --main-color: linear-gradient(15deg, #384fff, #779eff);
   --big-text-color: rgb(255, 255, 255);
   --med-text-color: rgb(248, 248, 248);
   --small-text-color: rgb(242, 242, 242);
   --filter: grayscale(33.33%);
+  --white: #fafbff;
   --border-color: #bbbbbb4a;
   --box-shadow-1: 0 25px 50px -12px rgb(0 0 0 / 65%);
   --box-shadow-2: 0px 3px 10px 0px rgb(0 0 0 / 66%);
@@ -472,7 +474,7 @@ h6 {
 /* Background color
 -------------------------------*/
 .theme-bg {
-  background-color: var(--big-text-color);
+  background-color: var(--small-text-color);
   background-clip: text;
 }
 
@@ -6844,11 +6846,32 @@ h6 {
 }
 
 .home-banner-03 .ht-text h1 {
-  font-size: 65px;
+  font-size: 4rem;
   font-weight: 600;
   cursor: pointer;
+  text-transform: capitalize;
+  background-image: linear-gradient(
+    -225deg,
+    #6213ff 0%,
+    rgb(41, 184, 255) 29%,
+    #c156cb 67%,
+    rgb(45, 230, 255) 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 100% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  display: inline-block;
   -webkit-font-smoothing: antialiased;
-  text-shadow: rgba(0, 0, 0, 0.1) 0 0 1px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 100% center;
+  }
 }
 
 @media (max-width: 991px) {
@@ -7113,6 +7136,7 @@ h6 {
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
   z-index: 1000;
+  color: var(--med-text-color);
 }
 .show-modald {
   opacity: 1 !important;
@@ -7126,11 +7150,17 @@ h6 {
   left: 50%;
   height: 80%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: var(--bg-color-1);
   padding: 1rem 1.5rem;
   width: 75%;
   overflow-y: scroll;
   border-radius: 13px;
+}
+@media only screen and (max-width: 600px) {
+  .modal-contentd {
+    width: 90%;
+    padding: 10px;
+  }
 }
 /* width */
 .modal-contentd::-webkit-scrollbar {
@@ -7178,7 +7208,7 @@ h6 {
 .project-title {
   font-size: 18px;
   font-weight: 700;
-  color: #111;
+  color: var(--big-text-color);
 }
 .project-title span {
   font-weight: 400;
@@ -7202,6 +7232,7 @@ New Slideshow
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 .project-img .container {
   max-width: 100%;
@@ -7239,13 +7270,17 @@ New Slideshow
   transition: opacity 0.25s;
 }
 
+.featured-wrapper .featured-list li figure img {
+  border-radius: 0.4px;
+}
+
 .featured-wrapper .arrows label::before,
 .featured-wrapper .arrows label::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   color: var(--black);
   background-position: center;
@@ -7334,6 +7369,7 @@ New Slideshow
 [id="image3"]:checked ~ .container .arrows [for="image2"]::before {
   content: "";
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-prev-slideshow.svg);
+  background-size: 33%;
 }
 
 [id="image1"]:checked ~ .container .arrows [for="image2"]::after,
@@ -7341,6 +7377,7 @@ New Slideshow
 [id="image3"]:checked ~ .container .arrows [for="image1"]::after {
   content: "";
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-next-slideshow.svg);
+  background-size: 33%;
 }
 
 [id="image1"]:checked ~ .container .dots [for="image1"],
@@ -7375,16 +7412,33 @@ New Slideshow
 .project-footer {
   font-size: 14px;
   font-weight: 600;
-  color: #111;
+  color: var(--big-text-color);
   margin: 1rem 0;
   text-align: center;
 }
+.project-info h4 {
+  color: var(--big-text-color);
+}
+@media only screen and (max-width: 600px) {
+  .project-info h4 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .project-info .tags {
+    font-size: 13px;
+    margin: 10px;
+    padding: 10px;
+    align-self: start;
+  }
+}
 .project-info .tags {
-  background-color: var(--main-color);
-  padding: 0.5rem 1.5rem;
+  background-color: #771acd;
+  padding: 0.3rem 1.2rem;
   color: white;
-  border-radius: 1rem;
-  margin: 0 1.5rem;
+  border-radius: 0.3rem;
+  margin: 5px 1.5rem;
   font-weight: 500;
 }
 .project-info h4 span {
@@ -7735,6 +7789,7 @@ New Slideshow
 }
 .progress {
   background-color: var(--bg-color-2);
+  border: 1px solid var(--white);
 }
 /* .navbar-collapse{
   background-color: #1c1d24 !important;
@@ -7793,7 +7848,7 @@ New Slideshow
   width: 30px;
 }
 b {
-  color: #f3f3f3;
+  color: var(--med-text-color);
   font-size: 12px;
   font-weight: 300;
 }
@@ -7835,4 +7890,24 @@ b {
 
 .item img:hover {
   filter: grayscale(0%);
+}
+
+.svgbg {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/svgbg-1.svg");
+  background-position: center;
+  background-size: cover;
+  background-color: var(--bg-color-2);
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 600px) {
+  .svgbg {
+    height: 60vh;
+  }
+  .hover-4 {
+    border: none;
+  }
 }
