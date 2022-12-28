@@ -67,7 +67,7 @@ const triggerBtns = document.querySelectorAll(".trigger");
 
 triggerBtns.forEach((btn) => {
   btn.onclick = function () {
-    var modal = btn.getAttribute("data-modal");
+    const modal = btn.getAttribute("data-modal");
     document.getElementById(modal).classList.add("show-modald");
   };
 });
@@ -76,9 +76,11 @@ const closeButton = document.querySelectorAll(".close-buttond");
 
 closeButton.forEach((closeBtn) => {
   closeBtn.onclick = function () {
-    var modal = closeBtn.closest(".modald").classList.remove("show-modald");
+    const modal = closeBtn.closest(".modald").classList.remove("show-modald");
   };
 });
+
+// console.log(ImageTab);
 
 //trigger.addEventListener("click", openModal);
 //closeButton.addEventListener("click", closeModal);

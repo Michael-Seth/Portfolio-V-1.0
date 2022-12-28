@@ -7259,23 +7259,23 @@ New Slideshow
   position: relative;
 }
 
-.featured-wrapper .featured-list {
+.project-img .featured-wrapper .featured-list {
   display: grid;
 }
 
-.featured-wrapper .featured-list li {
+.project-img .featured-wrapper .featured-list li {
   grid-column: 1;
   grid-row: 1;
   opacity: 0;
   transition: opacity 0.25s;
 }
 
-.featured-wrapper .featured-list li figure img {
+.project-img .featured-wrapper .featured-list li figure img {
   border-radius: 0.4px;
 }
 
-.featured-wrapper .arrows label::before,
-.featured-wrapper .arrows label::after {
+.project-img .featured-wrapper .arrows label::before,
+.project-img .featured-wrapper .arrows label::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -7354,13 +7354,19 @@ New Slideshow
   transition: all 0.25s;
 }
 
-/* MIMIC CLICK EVENT
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*==========================================================
+============================================================
+===========================================================
+                 Begin of New Slideshow
+==========================================================
+============================================================
+=========================================================== */
+
 [id="image1"]:checked ~ .container .featured-list li:nth-child(1),
 [id="image2"]:checked ~ .container .featured-list li:nth-child(2),
 [id="image3"]:checked ~ .container .featured-list li:nth-child(3),
-[id^="image"]:checked ~ .container .arrows [for^="image"]:hover::before,
-[id^="image"]:checked ~ .container .arrows [for^="image"]:hover::after {
+[id^="imageA"]:checked ~ .container .arrows [for^="imageA"]:hover::before,
+[id^="imageA"]:checked ~ .container .arrows [for^="imageA"]:hover::after {
   opacity: 1;
 }
 
@@ -7399,7 +7405,304 @@ New Slideshow
   transform: none;
 }
 
-/* End of New Slideshow */
+/*==========================================================
+============================================================
+===========================================================
+                 End of New Slideshow
+==========================================================
+============================================================
+=========================================================== */
+/*==========================================================
+============================================================
+===========================================================
+                 Begin of New Slideshow
+==========================================================
+============================================================
+=========================================================== */
+
+[id="image4"]:checked ~ .container .featured-list li:nth-child(1),
+[id="image5"]:checked ~ .container .featured-list li:nth-child(2),
+[id="image6"]:checked ~ .container .featured-list li:nth-child(3),
+[id^="imageB"]:checked ~ .container .arrows [for^="imageB"]:hover::before,
+[id^="imageB"]:checked ~ .container .arrows [for^="imageB"]:hover::after {
+  opacity: 1;
+}
+
+[id="image4"]:checked ~ .container .arrows [for="image6"]::before,
+[id="image5"]:checked ~ .container .arrows [for="image4"]::before,
+[id="image6"]:checked ~ .container .arrows [for="image5"]::before {
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-prev-slideshow.svg);
+  background-size: 33%;
+}
+
+[id="image4"]:checked ~ .container .arrows [for="image5"]::after,
+[id="image5"]:checked ~ .container .arrows [for="image6"]::after,
+[id="image6"]:checked ~ .container .arrows [for="image4"]::after {
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-next-slideshow.svg);
+  background-size: 33%;
+}
+
+[id="image4"]:checked ~ .container .dots [for="image4"],
+[id="image5"]:checked ~ .container .dots [for="image5"],
+[id="image6"]:checked ~ .container .dots [for="image6"] {
+  background: currentColor;
+}
+
+[id="image4"]:checked ~ .container [for="image4"] .outer,
+[id="image5"]:checked ~ .container [for="image5"] .outer,
+[id="image6"]:checked ~ .container [for="image6"] .outer {
+  background: var(--overlay);
+}
+
+[id="image4"]:checked ~ .container [for="image4"] .inner,
+[id="image5"]:checked ~ .container [for="image5"] .inner,
+[id="image6"]:checked ~ .container [for="image6"] .inner {
+  opacity: 1;
+  transform: none;
+}
+
+/*==========================================================
+============================================================
+===========================================================
+                 End of New Slideshow
+==========================================================
+============================================================
+=========================================================== */
+/*==========================================================
+============================================================
+===========================================================
+                 Begin of New Slideshow
+==========================================================
+============================================================
+=========================================================== */
+
+[id="image7"]:checked ~ .container .featured-list li:nth-child(1),
+[id="image8"]:checked ~ .container .featured-list li:nth-child(2),
+[id="image9"]:checked ~ .container .featured-list li:nth-child(3),
+[id^="imageC"]:checked ~ .container .arrows [for^="imageC"]:hover::before,
+[id^="imageC"]:checked ~ .container .arrows [for^="imageC"]:hover::after {
+  opacity: 1;
+}
+
+[id="image7"]:checked ~ .container .arrows [for="image9"]::before,
+[id="image8"]:checked ~ .container .arrows [for="image7"]::before,
+[id="image9"]:checked ~ .container .arrows [for="image8"]::before {
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-prev-slideshow.svg);
+  background-size: 33%;
+}
+
+[id="image7"]:checked ~ .container .arrows [for="image8"]::after,
+[id="image8"]:checked ~ .container .arrows [for="image9"]::after,
+[id="image9"]:checked ~ .container .arrows [for="image7"]::after {
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-next-slideshow.svg);
+  background-size: 33%;
+}
+
+[id="image7"]:checked ~ .container .dots [for="image7"],
+[id="image8"]:checked ~ .container .dots [for="image8"],
+[id="image9"]:checked ~ .container .dots [for="image9"] {
+  background: currentColor;
+}
+
+[id="image7"]:checked ~ .container [for="image7"] .outer,
+[id="image8"]:checked ~ .container [for="image8"] .outer,
+[id="image9"]:checked ~ .container [for="image9"] .outer {
+  background: var(--overlay);
+}
+
+[id="image7"]:checked ~ .container [for="image7"] .inner,
+[id="image8"]:checked ~ .container [for="image8"] .inner,
+[id="image9"]:checked ~ .container [for="image9"] .inner {
+  opacity: 1;
+  transform: none;
+}
+
+/*==========================================================
+============================================================
+===========================================================
+                 End of New Slideshow
+==========================================================
+============================================================
+=========================================================== */
+/*==========================================================
+============================================================
+===========================================================
+                 Begin of New Slideshow
+==========================================================
+============================================================
+=========================================================== */
+
+[id="image10"]:checked ~ .container .featured-list li:nth-child(1),
+[id="image11"]:checked ~ .container .featured-list li:nth-child(2),
+[id="image12"]:checked ~ .container .featured-list li:nth-child(3),
+[id^="imageD"]:checked ~ .container .arrows [for^="imageD"]:hover::before,
+[id^="imageD"]:checked ~ .container .arrows [for^="imageD"]:hover::after {
+  opacity: 1;
+}
+
+[id="image10"]:checked ~ .container .arrows [for="image12"]::before,
+[id="image11"]:checked ~ .container .arrows [for="image10"]::before,
+[id="image12"]:checked ~ .container .arrows [for="image11"]::before {
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-prev-slideshow.svg);
+  background-size: 33%;
+}
+
+[id="image10"]:checked ~ .container .arrows [for="image11"]::after,
+[id="image11"]:checked ~ .container .arrows [for="image12"]::after,
+[id="image12"]:checked ~ .container .arrows [for="image10"]::after {
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-next-slideshow.svg);
+  background-size: 33%;
+}
+
+[id="image10"]:checked ~ .container .dots [for="image10"],
+[id="image11"]:checked ~ .container .dots [for="image11"],
+[id="image12"]:checked ~ .container .dots [for="image12"] {
+  background: currentColor;
+}
+
+[id="image10"]:checked ~ .container [for="image10"] .outer,
+[id="image11"]:checked ~ .container [for="image11"] .outer,
+[id="image12"]:checked ~ .container [for="image12"] .outer {
+  background: var(--overlay);
+}
+
+[id="image10"]:checked ~ .container [for="image10"] .inner,
+[id="image11"]:checked ~ .container [for="image11"] .inner,
+[id="image12"]:checked ~ .container [for="image12"] .inner {
+  opacity: 1;
+  transform: none;
+}
+
+/*==========================================================
+============================================================
+===========================================================
+                 End of New Slideshow
+==========================================================
+============================================================
+=========================================================== */
+/*==========================================================
+============================================================
+===========================================================
+                 Begin of New Slideshow
+==========================================================
+============================================================
+=========================================================== */
+
+[id="image13"]:checked ~ .container .featured-list li:nth-child(1),
+[id="image14"]:checked ~ .container .featured-list li:nth-child(2),
+[id="image15"]:checked ~ .container .featured-list li:nth-child(3),
+[id^="imageE"]:checked ~ .container .arrows [for^="imageE"]:hover::before,
+[id^="imageE"]:checked ~ .container .arrows [for^="imageE"]:hover::after {
+  opacity: 1;
+}
+
+[id="image13"]:checked ~ .container .arrows [for="image15"]::before,
+[id="image14"]:checked ~ .container .arrows [for="image13"]::before,
+[id="image15"]:checked ~ .container .arrows [for="image14"]::before {
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-prev-slideshow.svg);
+  background-size: 33%;
+}
+
+[id="image13"]:checked ~ .container .arrows [for="image14"]::after,
+[id="image14"]:checked ~ .container .arrows [for="image15"]::after,
+[id="image15"]:checked ~ .container .arrows [for="image13"]::after {
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-next-slideshow.svg);
+  background-size: 33%;
+}
+
+[id="image13"]:checked ~ .container .dots [for="image13"],
+[id="image14"]:checked ~ .container .dots [for="image14"],
+[id="image15"]:checked ~ .container .dots [for="image15"] {
+  background: currentColor;
+}
+
+[id="image13"]:checked ~ .container [for="image13"] .outer,
+[id="image14"]:checked ~ .container [for="image14"] .outer,
+[id="image15"]:checked ~ .container [for="image15"] .outer {
+  background: var(--overlay);
+}
+
+[id="image13"]:checked ~ .container [for="image13"] .inner,
+[id="image14"]:checked ~ .container [for="image14"] .inner,
+[id="image15"]:checked ~ .container [for="image15"] .inner {
+  opacity: 1;
+  transform: none;
+}
+
+/*==========================================================
+============================================================
+===========================================================
+                 End of New Slideshow
+==========================================================
+============================================================
+=========================================================== */
+/*==========================================================
+============================================================
+===========================================================
+                 Begin of New Slideshow
+==========================================================
+============================================================
+=========================================================== */
+
+[id="image16"]:checked ~ .container .featured-list li:nth-child(1),
+[id="image17"]:checked ~ .container .featured-list li:nth-child(2),
+[id="image18"]:checked ~ .container .featured-list li:nth-child(3),
+[id^="imageF"]:checked ~ .container .arrows [for^="imageF"]:hover::before,
+[id^="imageF"]:checked ~ .container .arrows [for^="imageF"]:hover::after {
+  opacity: 1;
+}
+
+[id="image16"]:checked ~ .container .arrows [for="image18"]::before,
+[id="image17"]:checked ~ .container .arrows [for="image16"]::before,
+[id="image18"]:checked ~ .container .arrows [for="image17"]::before {
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-prev-slideshow.svg);
+  background-size: 33%;
+}
+
+[id="image16"]:checked ~ .container .arrows [for="image17"]::after,
+[id="image17"]:checked ~ .container .arrows [for="image18"]::after,
+[id="image18"]:checked ~ .container .arrows [for="image16"]::after {
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow-next-slideshow.svg);
+  background-size: 33%;
+}
+
+[id="image16"]:checked ~ .container .dots [for="image16"],
+[id="image17"]:checked ~ .container .dots [for="image17"],
+[id="image18"]:checked ~ .container .dots [for="image18"] {
+  background: currentColor;
+}
+
+[id="image16"]:checked ~ .container [for="image16"] .outer,
+[id="image17"]:checked ~ .container [for="image17"] .outer,
+[id="image18"]:checked ~ .container [for="image18"] .outer {
+  background: var(--overlay);
+}
+
+[id="image16"]:checked ~ .container [for="image16"] .inner,
+[id="image17"]:checked ~ .container [for="image17"] .inner,
+[id="image18"]:checked ~ .container [for="image18"] .inner {
+  opacity: 1;
+  transform: none;
+}
+
+/*==========================================================
+============================================================
+===========================================================
+                 End of New Slideshow
+==========================================================
+============================================================
+=========================================================== */
+
 .project-info h4 {
   font-size: 15px;
   font-weight: 600;
