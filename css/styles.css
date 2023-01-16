@@ -613,6 +613,24 @@ h6 {
   padding: 0;
 }
 
+.navbar-logo img {
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(to right, rgb(189, 20, 118), rgb(143, 15, 143));
+  padding: 2px;
+}
+.navbar-logo img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -5px;
+  border-radius: inherit;
+  background: linear-gradient(to right, red, orange);
+}
 .header-left .navbar-brand a {
   padding: 10px 0;
   background: var(--main-color);
@@ -7730,7 +7748,7 @@ New Slideshow
     flex-direction: column;
   }
   .project-info .tags {
-    font-size: 13px;
+    font-size: 12px;
     margin: 10px;
     padding: 10px;
     align-self: start;
@@ -7741,7 +7759,7 @@ New Slideshow
   padding: 0.3rem 1.2rem;
   color: white;
   border-radius: 0.3rem;
-  margin: 5px 1.5rem;
+  margin: 5px 1rem;
   font-weight: 500;
 }
 .project-info h4 span {
