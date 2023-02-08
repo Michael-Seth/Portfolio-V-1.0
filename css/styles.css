@@ -7872,7 +7872,19 @@ New Slideshow
 .portfolio-box-01:hover .portfolio-info {
   opacity: 1;
 }
-
+.view-live {
+  background-color: transparent;
+  padding: 6px 2px;
+  margin: 4px;
+  border-radius: 0;
+  color: rgb(82, 82, 82);
+}
+.view-live:hover {
+  background-color: rgba(116, 116, 116, 0.212);
+  padding: 6px 2px;
+  border-radius: 2px;
+  color: #fff;
+}
 .portfolio-box-01:hover .portfolio-info h5 {
   color: var(--main-color);
 }
